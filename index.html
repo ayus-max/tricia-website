@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For My Beautiful Tricia</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            font-family: 'Montserrat', sans-serif;
-            background: linear-gradient(135deg, #ffafbd, #ffc3a0, #cc2b5e, #753a88);
+            background: linear-gradient(135deg, #ff7eb3, #ff758c, #ff7eb3, #ff758c);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
             color: #fff;
             min-height: 100vh;
             overflow-x: hidden;
             position: relative;
+            padding: 20px;
         }
         
         @keyframes gradientBG {
@@ -31,7 +31,7 @@
         }
         
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
             position: relative;
@@ -40,7 +40,7 @@
         
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 30px 20px;
             animation: fadeIn 2s ease;
         }
         
@@ -50,104 +50,164 @@
         }
         
         h1 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 5rem;
-            margin-bottom: 20px;
+            font-size: 4.5rem;
+            margin-bottom: 10px;
             text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            color: #fff;
+            font-weight: 800;
+            letter-spacing: -1px;
         }
         
         .subtitle {
-            font-size: 1.5rem;
-            margin-bottom: 30px;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
             font-weight: 500;
+            max-width: 700px;
+            margin: 0 auto 30px;
         }
         
-        .main-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 40px;
-            margin: 50px 0;
-        }
-        
-        .tricia-photo {
-            flex: 1;
-            min-width: 300px;
-            max-width: 500px;
-            position: relative;
+        .flirty-section {
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            transition: transform 0.5s ease;
-            animation: float 6s ease-in-out infinite;
-        }
-        
-        .tricia-photo img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-        
-        .tricia-photo:hover {
-            transform: scale(1.03);
-        }
-        
-        .tricia-photo:hover img {
-            transform: scale(1.1);
-        }
-        
-        .messages {
-            flex: 1;
-            min-width: 300px;
-            max-width: 600px;
-            background: rgba(255, 255, 255, 0.15);
+            padding: 40px 30px;
+            margin: 30px 0;
+            text-align: center;
             backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
         }
         
-        .messages h2 {
-            font-family: 'Dancing Script', cursive;
+        .flirty-section h2 {
             font-size: 3rem;
             margin-bottom: 30px;
             color: #ffecf1;
-            text-align: center;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
         
-        .message-box {
-            background: rgba(255, 255, 255, 0.2);
+        .flirty-lines {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .flirty-line {
+            background: rgba(255, 255, 255, 0.25);
             border-radius: 15px;
-            padding: 20px;
-            margin-bottom: 25px;
+            padding: 25px;
+            width: calc(50% - 20px);
+            min-width: 250px;
+            transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
-            transition: transform 0.3s ease;
         }
         
-        .message-box:hover {
+        .flirty-line:hover {
             transform: translateY(-5px);
-            background: rgba(255, 255, 255, 0.25);
+            background: rgba(255, 255, 255, 0.35);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
         }
         
-        .message-box p {
-            font-size: 1.2rem;
-            line-height: 1.6;
+        .flirty-line p {
+            font-size: 1.4rem;
             font-style: italic;
+            line-height: 1.6;
+            position: relative;
+            z-index: 2;
         }
         
         .signature {
             text-align: right;
             font-weight: 600;
-            margin-top: 10px;
+            margin-top: 15px;
             color: #ffecf1;
+            font-size: 1.2rem;
+        }
+        
+        .interactive-section {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .flirt-button {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .flirt-button:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
+        }
+        
+        .flirt-button h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #ffecf1;
+        }
+        
+        .flirt-button p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+        
+        .button {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .special-box {
+            background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            margin: 50px auto;
+            max-width: 800px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            animation: pulse 2s infinite;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .special-box p {
+            font-size: 2.2rem;
+            line-height: 1.6;
+            font-weight: 600;
+            position: relative;
+            z-index: 2;
         }
         
         .footer {
             text-align: center;
-            padding: 30px;
+            padding: 40px;
             font-size: 1.2rem;
             margin-top: 30px;
         }
@@ -169,41 +229,6 @@
             animation: animateHeart 6s linear infinite;
         }
         
-        .heart-shape:nth-child(1) {
-            top: 10%;
-            left: 20%;
-            font-size: 1.5rem;
-            animation-delay: 0s;
-        }
-        
-        .heart-shape:nth-child(2) {
-            top: 25%;
-            left: 80%;
-            font-size: 2rem;
-            animation-delay: -1s;
-        }
-        
-        .heart-shape:nth-child(3) {
-            top: 45%;
-            left: 10%;
-            font-size: 1.2rem;
-            animation-delay: -2s;
-        }
-        
-        .heart-shape:nth-child(4) {
-            top: 60%;
-            left: 70%;
-            font-size: 1.8rem;
-            animation-delay: -3s;
-        }
-        
-        .heart-shape:nth-child(5) {
-            top: 75%;
-            left: 30%;
-            font-size: 1.4rem;
-            animation-delay: -4s;
-        }
-        
         @keyframes animateHeart {
             0% {
                 transform: translateY(100vh) rotate(0deg);
@@ -221,12 +246,6 @@
             }
         }
         
-        @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-            100% { transform: translateY(0px); }
-        }
-        
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -234,153 +253,190 @@
         
         @keyframes pulse {
             0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
+            50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
         
-        .special-box {
-            background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
-            border-radius: 15px;
-            padding: 25px;
-            text-align: center;
-            margin: 40px auto;
-            max-width: 800px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            animation: pulse 2s infinite;
-        }
-        
-        .special-box p {
-            font-size: 1.8rem;
-            font-family: 'Dancing Script', cursive;
-            line-height: 1.6;
-        }
-        
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 3.5rem;
-            }
-            
-            .subtitle {
-                font-size: 1.2rem;
-            }
-            
-            .special-box p {
-                font-size: 1.4rem;
-            }
-        }
-        
-        .flirty-section {
-            background: rgba(255, 255, 255, 0.1);
+        .aayush-section {
+            background: rgba(0, 0, 0, 0.1);
             border-radius: 20px;
             padding: 30px;
             margin: 40px 0;
             text-align: center;
         }
         
-        .flirty-section h2 {
-            font-family: 'Dancing Script', cursive;
-            font-size: 3.5rem;
-            margin-bottom: 25px;
+        .aayush-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
             color: #ffecf1;
         }
         
-        .flirty-lines {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
+        .aayush-section p {
+            font-size: 1.4rem;
+            line-height: 1.7;
+            max-width: 800px;
+            margin: 0 auto;
         }
         
-        .flirty-line {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 15px;
-            padding: 20px;
-            width: calc(33% - 20px);
-            min-width: 250px;
-            transition: all 0.3s ease;
+        .aayush-name {
+            display: inline-block;
+            background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
+            padding: 5px 15px;
+            border-radius: 30px;
+            font-weight: bold;
+            margin: 0 5px;
         }
         
-        .flirty-line:hover {
-            transform: scale(1.05);
-            background: rgba(255, 255, 255, 0.3);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        .sexy-section {
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 50px 0;
+            text-align: center;
         }
         
-        .flirty-line p {
-            font-size: 1.2rem;
+        .sexy-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            color: #ffecf1;
+        }
+        
+        .sexy-message {
+            font-size: 1.8rem;
+            line-height: 1.7;
             font-style: italic;
-            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+        }
+        
+        .hidden-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.5rem;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3rem;
+            }
+            
+            .subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .special-box p {
+                font-size: 1.6rem;
+            }
+            
+            .flirty-line {
+                width: 100%;
+            }
+        }
+        
+        .playful-text {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 1.3rem;
+            color: #ffecf1;
+            text-align: center;
+            margin: 20px 0;
+            padding: 0 20px;
+        }
+        
+        .secret-button {
+            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <div class="hearts-container">
-        <i class="fas fa-heart heart-shape"></i>
-        <i class="fas fa-heart heart-shape"></i>
-        <i class="fas fa-heart heart-shape"></i>
-        <i class="fas fa-heart heart-shape"></i>
-        <i class="fas fa-heart heart-shape"></i>
+        <!-- Hearts will be added by JS -->
     </div>
     
     <div class="container">
         <header>
             <h1>For My Beautiful Tricia <i class="fas fa-heart heart"></i></h1>
             <p class="subtitle">A special place just for you, created with love by Aayush</p>
+            <p class="playful-text">Where every word is a flirtation and every thought is of you...</p>
         </header>
         
-        <div class="main-content">
-            <div class="tricia-photo">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Beautiful Tricia">
-            </div>
-            
-            <div class="messages">
-                <h2>My Thoughts About You</h2>
-                
-                <div class="message-box">
-                    <p>Tricia, every time I see your smile, the world seems brighter. Your beauty isn't just in how you look, but in how you make everyone around you feel.</p>
-                </div>
-                
-                <div class="message-box">
-                    <p>I find myself thinking about you when I should be focusing on other things. You've become my favorite distraction and my most cherished thought.</p>
-                </div>
-                
-                <div class="message-box">
-                    <p>Your eyes tell a story I could listen to forever. They sparkle with kindness, intelligence, and a playful spirit that draws me in completely.</p>
+        <div class="flirty-section">
+            <h2>Aayush's Flirty Messages</h2>
+            <div class="flirty-lines">
+                <div class="flirty-line">
+                    <p>Tricia, if beauty were time, you'd be eternity. And I'd spend every second admiring you.</p>
                     <div class="signature">- Aayush</div>
                 </div>
-                
-                <div class="message-box">
-                    <p>I made this website because words alone couldn't express how special you are to me. You deserve the world, and I wanted to create something beautiful just for you.</p>
+                <div class="flirty-line">
+                    <p>Are you a magician? Because whenever I think of you, everyone else disappears.</p>
+                    <div class="signature">- Aayush</div>
+                </div>
+                <div class="flirty-line">
+                    <p>If I could rearrange the alphabet, I'd put U and I together... and maybe add a bedroom.</p>
+                    <div class="signature">- Aayush</div>
+                </div>
+                <div class="flirty-line">
+                    <p>Do you believe in love at first sight, or should I walk by again... but slower this time?</p>
+                    <div class="signature">- Aayush</div>
                 </div>
             </div>
         </div>
         
-        <div class="flirty-section">
-            <h2>Just For You, Beautiful</h2>
-            <div class="flirty-lines">
-                <div class="flirty-line">
-                    <p>If I had a flower for every time I thought of you, I could walk in my garden forever.</p>
+        <div class="interactive-section">
+            <div class="flirt-button" onclick="revealMessage(1)">
+                <h3>What Aayush Thinks</h3>
+                <p>Click to reveal what's on Aayush's mind...</p>
+                <div class="hidden-message" id="message1">
+                    <p>I can't stop imagining what it would be like to have you close... feeling your skin against mine...</p>
+                    <div class="signature">- Aayush</div>
                 </div>
-                <div class="flirty-line">
-                    <p>Do you have a map? I keep getting lost in your eyes.</p>
+                <button class="button secret-button">Reveal Secret</button>
+            </div>
+            
+            <div class="flirt-button" onclick="revealMessage(2)">
+                <h3>Aayush's Fantasy</h3>
+                <p>Click to discover Aayush's fantasy...</p>
+                <div class="hidden-message" id="message2">
+                    <p>My fantasy involves you, me, and a night where time stands still... exploring every inch of each other...</p>
+                    <div class="signature">- Aayush</div>
                 </div>
-                <div class="flirty-line">
-                    <p>Are you a magician? Because whenever I look at you, everyone else disappears.</p>
-                </div>
-                <div class="flirty-line">
-                    <p>Is your name Google? Because you have everything I've been searching for.</p>
-                </div>
-                <div class="flirty-line">
-                    <p>If beauty were time, you'd be eternity. If beauty were a flower, you'd be the rarest bloom.</p>
-                </div>
-                <div class="flirty-line">
-                    <p>I'm not a photographer, but I can picture us together.</p>
-                </div>
+                <button class="button secret-button">Reveal Fantasy</button>
             </div>
         </div>
         
         <div class="special-box">
             <p>Tricia, you're the most beautiful girl in my world. Every moment with you feels like a dream I never want to wake up from.</p>
+        </div>
+        
+        <div class="aayush-section">
+            <h2>From Aayush, With Love</h2>
+            <p>Hey Tricia, it's <span class="aayush-name">Aayush</span> here. I created this just for you because you're constantly on my mind.</p>
+            <p>I find myself thinking about your smile, your laugh, and the way you make me feel when we're together.</p>
+            <p>You're the first thing I think about in the morning and the last thing on my mind at night.</p>
+        </div>
+        
+        <div class="sexy-section">
+            <h2>Just Between Us</h2>
+            <div class="sexy-message">
+                <p>I wonder what it would feel like to trace my fingers along your skin as we lay together in the moonlight...</p>
+                <div class="signature">- Aayush</div>
+            </div>
+            
+            <div class="sexy-message">
+                <p>Imagine a night where we explore each other without any reservations... just pure passion and connection...</p>
+                <div class="signature">- Aayush</div>
+            </div>
+            
+            <button class="button" onclick="revealSexyMessage()">What Aayush Really Wants</button>
+            <div class="hidden-message" id="sexy-message">
+                <p>I want to discover every curve, every sigh, every sensitive spot... to learn what makes you tremble with pleasure...</p>
+                <div class="signature">- Aayush</div>
+            </div>
         </div>
         
         <div class="footer">
@@ -390,12 +446,12 @@
     </div>
     
     <script>
-        // Add more floating hearts
+        // Add floating hearts
         document.addEventListener('DOMContentLoaded', function() {
             const heartsContainer = document.querySelector('.hearts-container');
             const colors = ['#ff4d6d', '#ff8fa3', '#ffb3c1', '#ffccd5'];
             
-            for (let i = 0; i < 20; i++) {
+            for (let i = 0; i < 30; i++) {
                 const heart = document.createElement('i');
                 heart.classList.add('fas', 'fa-heart', 'heart-shape');
                 
@@ -414,22 +470,48 @@
                 
                 heartsContainer.appendChild(heart);
             }
-            
-            // Add pulse effect to message boxes
-            const messageBoxes = document.querySelectorAll('.message-box');
-            messageBoxes.forEach((box, index) => {
-                box.style.animationDelay = `${index * 0.2}s`;
-            });
-            
-            // Add animation to flirty lines
-            const flirtyLines = document.querySelectorAll('.flirty-line');
-            flirtyLines.forEach((line, index) => {
+        });
+        
+        // Reveal hidden messages
+        function revealMessage(num) {
+            const message = document.getElementById(`message${num}`);
+            if (message.style.display === "block") {
+                message.style.display = "none";
+            } else {
+                message.style.display = "block";
+                message.style.animation = "fadeIn 0.5s ease";
+            }
+        }
+        
+        function revealSexyMessage() {
+            const message = document.getElementById('sexy-message');
+            if (message.style.display === "block") {
+                message.style.display = "none";
+            } else {
+                message.style.display = "block";
+                message.style.animation = "fadeIn 0.5s ease";
+            }
+        }
+        
+        // Add playful animations to flirty lines
+        const flirtyLines = document.querySelectorAll('.flirty-line');
+        flirtyLines.forEach(line => {
+            line.addEventListener('click', function() {
+                this.style.transform = "scale(1.05) rotate(2deg)";
                 setTimeout(() => {
-                    line.style.opacity = 1;
-                    line.style.transform = "translateY(0)";
-                }, 300 + index * 100);
+                    this.style.transform = "scale(1) rotate(0)";
+                }, 300);
             });
         });
+        
+        // Add heartbeat effect to special box
+        setInterval(() => {
+            const specialBox = document.querySelector('.special-box');
+            specialBox.style.animation = "none";
+            setTimeout(() => {
+                specialBox.style.animation = "pulse 2s infinite";
+            }, 10);
+        }, 2000);
     </script>
 </body>
 </html>
