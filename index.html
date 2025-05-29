@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Beautiful Tricia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #ffafbd, #ffc3a0, #cc2b5e, #753a88);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeIn 2s ease;
+        }
+        
+        .heart {
+            color: #ff4d6d;
+            animation: pulse 1.5s infinite;
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 5rem;
+            margin-bottom: 20px;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+        
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin: 50px 0;
+        }
+        
+        .tricia-photo {
+            flex: 1;
+            min-width: 300px;
+            max-width: 500px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transition: transform 0.5s ease;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .tricia-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .tricia-photo:hover {
+            transform: scale(1.03);
+        }
+        
+        .tricia-photo:hover img {
+            transform: scale(1.1);
+        }
+        
+        .messages {
+            flex: 1;
+            min-width: 300px;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .messages h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #ffecf1;
+            text-align: center;
+        }
+        
+        .message-box {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 25px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .message-box:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.25);
+        }
+        
+        .message-box p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        
+        .signature {
+            text-align: right;
+            font-weight: 600;
+            margin-top: 10px;
+            color: #ffecf1;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 1.2rem;
+            margin-top: 30px;
+        }
+        
+        .hearts-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .heart-shape {
+            position: absolute;
+            display: block;
+            color: rgba(255, 255, 255, 0.5);
+            animation: animateHeart 6s linear infinite;
+        }
+        
+        .heart-shape:nth-child(1) {
+            top: 10%;
+            left: 20%;
+            font-size: 1.5rem;
+            animation-delay: 0s;
+        }
+        
+        .heart-shape:nth-child(2) {
+            top: 25%;
+            left: 80%;
+            font-size: 2rem;
+            animation-delay: -1s;
+        }
+        
+        .heart-shape:nth-child(3) {
+            top: 45%;
+            left: 10%;
+            font-size: 1.2rem;
+            animation-delay: -2s;
+        }
+        
+        .heart-shape:nth-child(4) {
+            top: 60%;
+            left: 70%;
+            font-size: 1.8rem;
+            animation-delay: -3s;
+        }
+        
+        .heart-shape:nth-child(5) {
+            top: 75%;
+            left: 30%;
+            font-size: 1.4rem;
+            animation-delay: -4s;
+        }
+        
+        @keyframes animateHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+            100% { transform: scale(1); }
+        }
+        
+        .special-box {
+            background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            margin: 40px auto;
+            max-width: 800px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            animation: pulse 2s infinite;
+        }
+        
+        .special-box p {
+            font-size: 1.8rem;
+            font-family: 'Dancing Script', cursive;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .special-box p {
+                font-size: 1.4rem;
+            }
+        }
+        
+        .flirty-section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .flirty-section h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            color: #ffecf1;
+        }
+        
+        .flirty-lines {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+        .flirty-line {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            width: calc(33% - 20px);
+            min-width: 250px;
+            transition: all 0.3s ease;
+        }
+        
+        .flirty-line:hover {
+            transform: scale(1.05);
+            background: rgba(255, 255, 255, 0.3);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .flirty-line p {
+            font-size: 1.2rem;
+            font-style: italic;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts-container">
+        <i class="fas fa-heart heart-shape"></i>
+        <i class="fas fa-heart heart-shape"></i>
+        <i class="fas fa-heart heart-shape"></i>
+        <i class="fas fa-heart heart-shape"></i>
+        <i class="fas fa-heart heart-shape"></i>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>For My Beautiful Tricia <i class="fas fa-heart heart"></i></h1>
+            <p class="subtitle">A special place just for you, created with love by Aayush</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="tricia-photo">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Beautiful Tricia">
+            </div>
+            
+            <div class="messages">
+                <h2>My Thoughts About You</h2>
+                
+                <div class="message-box">
+                    <p>Tricia, every time I see your smile, the world seems brighter. Your beauty isn't just in how you look, but in how you make everyone around you feel.</p>
+                </div>
+                
+                <div class="message-box">
+                    <p>I find myself thinking about you when I should be focusing on other things. You've become my favorite distraction and my most cherished thought.</p>
+                </div>
+                
+                <div class="message-box">
+                    <p>Your eyes tell a story I could listen to forever. They sparkle with kindness, intelligence, and a playful spirit that draws me in completely.</p>
+                    <div class="signature">- Aayush</div>
+                </div>
+                
+                <div class="message-box">
+                    <p>I made this website because words alone couldn't express how special you are to me. You deserve the world, and I wanted to create something beautiful just for you.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="flirty-section">
+            <h2>Just For You, Beautiful</h2>
+            <div class="flirty-lines">
+                <div class="flirty-line">
+                    <p>If I had a flower for every time I thought of you, I could walk in my garden forever.</p>
+                </div>
+                <div class="flirty-line">
+                    <p>Do you have a map? I keep getting lost in your eyes.</p>
+                </div>
+                <div class="flirty-line">
+                    <p>Are you a magician? Because whenever I look at you, everyone else disappears.</p>
+                </div>
+                <div class="flirty-line">
+                    <p>Is your name Google? Because you have everything I've been searching for.</p>
+                </div>
+                <div class="flirty-line">
+                    <p>If beauty were time, you'd be eternity. If beauty were a flower, you'd be the rarest bloom.</p>
+                </div>
+                <div class="flirty-line">
+                    <p>I'm not a photographer, but I can picture us together.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="special-box">
+            <p>Tricia, you're the most beautiful girl in my world. Every moment with you feels like a dream I never want to wake up from.</p>
+        </div>
+        
+        <div class="footer">
+            <p>Created with <i class="fas fa-heart" style="color: #ff4d6d;"></i> by Aayush for the amazing Tricia</p>
+            <p>You brighten my world just by being in it</p>
+        </div>
+    </div>
+    
+    <script>
+        // Add more floating hearts
+        document.addEventListener('DOMContentLoaded', function() {
+            const heartsContainer = document.querySelector('.hearts-container');
+            const colors = ['#ff4d6d', '#ff8fa3', '#ffb3c1', '#ffccd5'];
+            
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('i');
+                heart.classList.add('fas', 'fa-heart', 'heart-shape');
+                
+                // Random properties
+                const left = Math.random() * 100;
+                const size = Math.random() * 2 + 0.5;
+                const duration = Math.random() * 5 + 5;
+                const delay = Math.random() * -5;
+                const color = colors[Math.floor(Math.random() * colors.length)];
+                
+                heart.style.left = `${left}%`;
+                heart.style.fontSize = `${size}rem`;
+                heart.style.animationDuration = `${duration}s`;
+                heart.style.animationDelay = `${delay}s`;
+                heart.style.color = color;
+                
+                heartsContainer.appendChild(heart);
+            }
+            
+            // Add pulse effect to message boxes
+            const messageBoxes = document.querySelectorAll('.message-box');
+            messageBoxes.forEach((box, index) => {
+                box.style.animationDelay = `${index * 0.2}s`;
+            });
+            
+            // Add animation to flirty lines
+            const flirtyLines = document.querySelectorAll('.flirty-line');
+            flirtyLines.forEach((line, index) => {
+                setTimeout(() => {
+                    line.style.opacity = 1;
+                    line.style.transform = "translateY(0)";
+                }, 300 + index * 100);
+            });
+        });
+    </script>
+</body>
+</html>
